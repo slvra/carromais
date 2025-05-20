@@ -1,0 +1,96 @@
+<h2 class="titulo mb-5">Fale conosco</h2>
+<div class="container mb-5">
+  <div class="row g-3">
+    <div class="col-md-6 my-auto">
+      <img
+        src="api/img/territory1.jpg"
+        class="img-fluid rounded shadow-sm"
+      />
+    </div>
+    <div class="col-md-6">
+      <div class="border rounded shadow-sm p-4">
+        <form (ngSubmit)="enviarFormulario()" #contatoForm="ngForm">
+          <div class="mb-3">
+            <input
+              type="text"
+              name="nome"
+              placeholder="NOME*"
+              class="form-control"
+              [(ngModel)]="formData.nome"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="email"
+              name="email"
+              placeholder="E-MAIL*"
+              class="form-control"
+              [(ngModel)]="formData.email"
+              required
+              email
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="tel"
+              name="telefone"
+              placeholder="TELEFONE*"
+              class="form-control"
+              [(ngModel)]="formData.telefone"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <textarea
+              rows="5"
+              name="mensagem"
+              placeholder="MENSAGEM*"
+              id="mensagem"
+              class="form-control"
+              [(ngModel)]="formData.mensagem"
+              required
+            ></textarea>
+          </div>
+          <p class="text-muted small mb-2 text-justify">
+            Os dados serão mantidos em nossa base de dados, só enquanto for
+            desejado por você. A qualquer momento, será possível editar ou
+            remover tais dados.
+            <a routerLink="/privacidade">Termos e Condições</a>
+          </p>
+          <div class="form-check mb-2">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="lgpd"
+              [(ngModel)]="formData.lgpd"
+              required
+            />
+            <label class="form-check-label small" for="lgpd"
+              >Sim, li e concordo com os vossos termos.*</label
+            >
+          </div>
+          <div class="form-check mb-3">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="ofertas"
+              [(ngModel)]="formData.ofertas"
+            />
+            <label class="form-check-label small" for="ofertas"
+              >Sim, também quero receber descontos e novidades.</label
+            >
+          </div>
+          <button
+            type="submit"
+            id="enviar"
+            class="btn btn-primary text-center m-100"
+            [disabled]="contatoForm.invalid"
+          >
+            Enviar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

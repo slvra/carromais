@@ -1,0 +1,101 @@
+.about-company {
+  background-color: #f8f9fa;
+}
+
+.divider {
+  height: 4px;
+  width: 80px;
+}
+
+.stats-section {
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #e9ecef;
+  top: 0;
+  bottom: 0;
+  left: 50px;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-year {
+  position: absolute;
+  left: -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.timeline-content {
+  position: relative;
+  padding: 20px;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-left: 60px;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -15px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid white;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 31px;
+  }
+  
+  .timeline-year {
+    left: -15px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+  
+  .timeline-content {
+    margin-left: 40px;
+  }
+  
+  .timeline-content::before {
+    left: -15px;
+    border-width: 10px;
+    border-right-width: 15px;
+  }
+}

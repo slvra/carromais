@@ -1,0 +1,106 @@
+<div class="termos-privacidade-container">
+    <h1>Termos de Uso e Política de Privacidade</h1>
+
+    <section class="termos-uso">
+        <h2>1. Termos de Uso</h2>
+        <p>
+            Estes Termos de Uso regem o acesso e a utilização dos serviços de cadastro interno da CarroMais. Ao se
+            cadastrar, você concorda com estes termos em sua totalidade.
+        </p>
+
+        <h3>1.1. Uso dos Dados de Cadastro</h3>
+        <p>
+            Os dados fornecidos no seu cadastro interno serão utilizados pela CarroMais para comunicação sobre ofertas, agendamento de serviços, análise interna para melhoria dos serviços.
+        </p>
+
+        <h3>1.2. Responsabilidades do Usuário</h3>
+        <p>
+            Você é responsável pela veracidade e atualização dos dados fornecidos no cadastro. O uso indevido dos
+            serviços ou o fornecimento de informações falsas poderão acarretar em suspensão ou cancelamento do cadastro.
+        </p>
+
+    </section>
+
+    <section class="politica-privacidade">
+        <h2>2. Política de Privacidade</h2>
+        <p>
+            A sua privacidade é importante para a CarroMais. Esta Política de Privacidade descreve como coletamos,
+            usamos, armazenamos e protegemos os seus dados pessoais em conformidade com a Lei Geral de Proteção de Dados
+            (LGPD).
+        </p>
+
+        <h3>2.1. Dados Pessoais Coletados</h3>
+        <p>
+            Os seguintes dados pessoais poderão ser coletados durante o seu cadastro interno: nome completo, CPF, endereço, telefone, e-mail, dados do veículo de interesse.
+        </p>
+
+        <h3>2.2. Finalidade do Tratamento dos Dados</h3>
+        <p>
+            Os seus dados pessoais serão tratados para as seguintes finalidades: identificação do usuário, comunicação de ofertas personalizadas, agendamento de test drives, envio de informações sobre serviços, cumprimento de obrigações legais.
+        </p>
+
+        <h3>2.3. Compartilhamento de Dados</h3>
+        <p>
+            A CarroMais poderá compartilhar seus dados pessoais com parceiros de negócio, fornecedores de serviços, autoridades competentes em cumprimento de lei. Em caso de compartilhamento, exigiremos que os terceiros adotem medidas de segurança e privacidade compatíveis com esta política.
+        </p>
+
+        <h3>2.4. Segurança dos Dados</h3>
+        <p>
+            Implementamos medidas de segurança técnicas e organizacionais para proteger os seus dados pessoais contra
+            acesso não autorizado, alteração, divulgação ou destruição.
+        </p>
+
+        <h3>2.5. Seus Direitos como Titular dos Dados (LGPD)</h3>
+        <p>
+            Em conformidade com a LGPD, você tem os seguintes direitos:
+        <ul>
+            <li>Confirmação da existência de tratamento de dados pessoais.</li>
+            <li>Acesso aos seus dados pessoais.</li>
+            <li>Correção de dados incompletos, inexatos ou desatualizados.</li>
+            <li>Anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade
+                com a lei.</li>
+            <li>Portabilidade dos dados a outro fornecedor de serviço ou produto, mediante requisição expressa e
+                observados os regulamentos da autoridade nacional.</li>
+            <li>Eliminação dos dados pessoais tratados com o seu consentimento, exceto nas hipóteses previstas no art.
+                16 da LGPD.</li>
+            <li>Informação das entidades públicas e privadas com as quais o controlador realizou uso compartilhado de
+                dados.</li>
+            <li>Informação sobre a possibilidade de não fornecer consentimento e sobre as consequências da negativa.
+            </li>
+            <li>Revogação do consentimento, a qualquer momento, mediante manifestação expressa.</li>
+            <li>Revisão de decisões tomadas unicamente com base em tratamento automatizado de dados pessoais que afetem
+                seus interesses.</li>
+        </ul>
+        <p>
+            Para exercer seus direitos, entre em contato conosco através do nosso <a routerLink="/contato">portal</a>.
+        </p>
+
+
+        <h3>2.6. Retenção dos Dados</h3>
+        <p>
+            Os seus dados pessoais serão mantidos pelo período necessário para o cumprimento das finalidades para as
+            quais foram coletados, observando os prazos legais e regulatórios aplicáveis.
+        </p>
+
+        <h3>2.7. Alterações nesta Política</h3>
+        <p>
+            Esta Política de Privacidade poderá ser atualizada periodicamente. As alterações serão comunicadas através
+            dos nossos canais de comunicação.
+        </p>
+
+        <h3>2.8. Contato</h3>
+        <p>
+            Em caso de dúvidas ou para exercer seus direitos relacionados à proteção de dados, entre em contato conosco
+            através do <a routerLink="/contato">portal</a> ou pelo telefone (31) 4004-3303.
+        </p>
+    </section>
+
+    <div class="acoes">
+        <label>
+            <input type="checkbox" [(ngModel)]="termosAceitos"> Li e concordo com os Termos de Uso e Política de
+            Privacidade.
+        </label>
+        <button [disabled]="!termosAceitos" (click)="aceitarTermos()">Aceitar</button>
+        <button (click)="naoAceitarTermos()">Não Aceitar</button>
+    </div>
+</div>
