@@ -29,6 +29,10 @@
   top: 87%;
 }
 
+.sobre-p{
+  text-align: justify;
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem !important;
