@@ -1,16 +1,27 @@
+:root {
+  --cor-azul: #008cba;
+  --cor-azul-claro: #e3f2fd; 
+  --cor-texto: #333;
+  --cor-texto-claro: #7f8c8d;
+  --cor-branco: #fff;
+  --cor-cinza-claro: #f8f9fa;
+}
+
 .vehicles-section {
-  background-color: #f8f9fa;
+  background-color: var(--cor-cinza-claro);
 }
 
 .divider {
   height: 4px;
   width: 80px;
+  background-color: var(--cor-azul);
 }
 
 .vehicle-card {
   transition: all 0.3s ease;
   border-radius: 0.75rem;
   overflow: hidden;
+  background-color: var(--cor-branco);
 }
 
 .vehicle-card:hover {
@@ -25,9 +36,38 @@
 }
 
 .vehicle-details {
-  background-color: #f8f9fa;
+  background-color: var(--cor-cinza-claro);
   border-radius: 0.5rem;
   padding: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--cor-azul);
+  border-color: var(--cor-azul);
+}
+
+.btn-primary:hover {
+  background-color: #0d407a;
+  border-color: #113762;
+}
+
+.btn-outline-primary {
+  color: var(--cor-azul);
+  border-color: var(--cor-azul);
+  border-width: 2px;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--cor-azul);
+  color: white;
+}
+
+.badge {
+  background-color: var(--cor-azul);
+}
+
+.text-primary {
+  color: var(--cor-azul) !important;
 }
 
 @media (max-width: 768px) {
@@ -44,10 +84,6 @@
   .vehicle-card .col-md-5 {
     height: 200px;
   }
-}
-
-.btn-outline-primary {
-  border-width: 2px;
 }
 
 .fa, .fas {

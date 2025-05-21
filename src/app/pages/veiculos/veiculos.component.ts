@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGasPump, faTachometerAlt, faCalendarAlt, faCar, faMoneyBillWave } from '@fortawesome/free-solid-svg-icons';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-veiculos',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, RouterModule],
   templateUrl: './veiculos.component.html',
   styleUrls: ['./veiculos.component.css']
 })
@@ -30,7 +31,7 @@ export class VeiculosComponent {
       km: 18.500,
       combustivel: 'Flex',
       preco: 112.900,
-      foto: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      foto: '/api/img/TCross.png',
       tipo: 'SUV',
       destaque: 'Semi-novo',
       motor: '1.4 TSI Flex',
