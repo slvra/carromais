@@ -13,27 +13,27 @@
           <div class="carousel-caption d-flex flex-column justify-content-center h-100">
             <h1 class="display-3 fw-bold mb-4">Explore Nossa Concessionária</h1>
             <p class="lead mb-5">Bem-vindo ao CarroMais, onde você encontra os melhores veículos usados e semi-novos</p>
-            <button class="btn btn-outline-primary btn-lg px-5 align-self-center">Ver estoque</button>
+            <!-- <button class="carousel-button btn btn-light btn-lg px-5 align-self-center">Ver estoque</button> -->
           </div>
           <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
         </div>
         
         <div class="carousel-item h-100">
-          <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100 h-100 object-fit-cover" alt="Carro de luxo">
+          <img src="/api/img/territory1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Carro de luxo">
           <div class="carousel-caption d-flex flex-column justify-content-center h-100">
             <h1 class="display-3 fw-bold mb-4">Qualidade e Sofisticação</h1>
             <p class="lead mb-5">Descubra a excelência em cada modelo de nossa seleção premium</p>
-            <button class="btn btn-outline-primary btn-lg px-5 align-self-center">Conhecer mais</button>
+            <!-- <button class="carousel-button btn btn-light btn-lg px-5 align-self-center">Conhecer mais</button> -->
           </div>
           <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
         </div>
         
         <div class="carousel-item h-100">
-          <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100 h-100 object-fit-cover" alt="SUV moderno">
+          <img src="/api/img/raptor.jpg" class="d-block w-100 h-100 object-fit-cover" alt="SUV moderno">
           <div class="carousel-caption d-flex flex-column justify-content-center h-100">
             <h1 class="display-3 fw-bold mb-4">Financiamento Facilitado</h1>
             <p class="lead mb-5">Condições especiais para você realizar o sonho do carro novo</p>
-            <button class="btn btn-outline-primary btn-lg px-5 align-self-center">Simular financiamento</button>
+            <!-- <button class="carousel-button btn btn-light btn-lg px-5 align-self-center">Simular financiamento</button> -->
           </div>
           <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
         </div>
@@ -62,7 +62,7 @@
         <div class="col-md-6 col-lg-3" *ngFor="let vehicle of featuredVehicles">
           <div class="card h-100 border-0 shadow-sm overflow-hidden transition-all hover:shadow-lg">
             <div class="position-relative">
-              <img [src]="vehicle.image" class="card-img-top object-fit-cover" [alt]="vehicle.model" style="height: 200px;">
+              <img [src]="vehicle.image" class="card-img-top object-fit-contain" [alt]="vehicle.model" style="height: 200px;">
               <span *ngIf="vehicle.highlight" class="position-absolute top-3 end-3 text-white px-3 py-1 rounded-pill small fw-bold" style="background-color: var(--cor-azul);">
                 {{vehicle.highlight}}
               </span>
@@ -75,7 +75,7 @@
                 <span><i class="fas fa-calendar-alt me-1"></i> {{vehicle.year}}</span>
                 <span><i class="fas fa-gas-pump me-1"></i> {{vehicle.fuelType}}</span>
               </div>
-              <button class="btn btn-outline-dark w-100 mt-auto">Ver detalhes</button>
+              <button class="btn btn-outline-dark w-100 mt-auto" routerLink="/veiculos">Ver detalhes</button>
             </div>
           </div>
         </div>
@@ -138,7 +138,7 @@
           </h2>
           <p class="lead text-muted mb-4 text-justify">Somos apaixonados por carros e dedicados a fornecer a melhor experiência para nossos clientes. Com uma ampla variedade de modelos e um atendimento personalizado, garantimos a satisfação de cada pessoa que visita nossa concessionária.</p>
           <p class="text-muted mb-4 text-justify">Fundada em 2010, a CarroMais já ajudou mais de 5.000 clientes a realizarem o sonho do carro próprio. Nossa equipe de especialistas está pronta para te ajudar a encontrar o veículo perfeito para suas necessidades.</p>
-          <button class="btn btn-outline-dark px-4">Conheça nossa história</button>
+          <button class="btn btn-outline-dark px-4" routerLink="/sobre">Conheça nossa história</button>
         </div>
         <div class="col-lg-6">
           <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
@@ -153,7 +153,7 @@
       <h2 class="display-5 fw-bold mb-3">Pronto para encontrar seu carro dos sonhos?</h2>
       <p class="lead mb-5 opacity-75">Agende uma visita com um dos nossos consultores</p>
       <div class="d-flex justify-content-center gap-3">
-        <button class="btn btn-outline-light btn-lg px-4">Falar com consultor</button>
+        <button class="btn btn-light btn-lg px-4" routerLink="/contato">Falar com consultor</button>
       </div>
     </div>
   </section>

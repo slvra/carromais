@@ -2,7 +2,7 @@
   <div class="container py-5">
     <div class="text-center mb-5">
       <h1 class="display-4 fw-bold text-dark mb-3">Nossa História</h1>
-      <div class="divider mx-auto bg-danger" style="height: 4px; width: 80px;"></div>
+      <div class="divider mx-auto" style="height: 4px; width: 80px; background-color: var(--cor-azul);"></div>
       <p class="lead text-muted mt-4">Conheça a jornada da CarroMais, uma trajetória de paixão por carros e compromisso com nossos clientes</p>
     </div>
 
@@ -20,10 +20,10 @@
     </div>
 
     <div class="stats-section py-5 my-5 bg-white rounded-3 shadow-sm">
-      <div class="row g-4 text-center">
+      <div class="row g-4 text-center justify-content-evenly">
         <div class="col-6 col-md-4 col-lg-2" *ngFor="let stat of companyStats">
           <div class="p-3 h-100">
-            <fa-icon [icon]="stat.icon" class="text-danger fs-1 mb-3"></fa-icon>
+            <fa-icon [icon]="stat.icon" class=" fs-1 mb-3" style="color: var(--cor-azul);"></fa-icon>
             <h3 class="fw-bold">{{stat.value}}</h3>
             <p class="text-muted mb-0">{{stat.label}}</p>
           </div>
@@ -36,7 +36,7 @@
       
       <div class="timeline">
         <div class="timeline-item" *ngFor="let event of timeline">
-          <div class="timeline-year bg-danger text-white">{{event.year}}</div>
+          <div class="timeline-year text-white" style="background-color: var(--cor-azul)">{{event.year}}</div>
           <div class="timeline-content shadow-sm">
             <h4 class="fw-bold">{{event.title}}</h4>
             <p class="text-muted">{{event.description}}</p>
@@ -52,7 +52,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="card h-100 border-0 shadow-sm">
             <div class="card-body text-center p-4">
-              <div class="icon-circle bg-danger bg-opacity-10 text-danger mx-auto mb-4">
+              <div class="icon-circle bg-opacity-10 text-light mx-auto mb-4" style="background-color: var(--cor-azul)">
                 <fa-icon [icon]="faCar" class="fs-4"></fa-icon>
               </div>
               <h4 class="fw-bold">Paixão por Carros</h4>
@@ -64,7 +64,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="card h-100 border-0 shadow-sm">
             <div class="card-body text-center p-4">
-              <div class="icon-circle bg-danger bg-opacity-10 text-danger mx-auto mb-4">
+              <div class="icon-circle bg-opacity-10 text-light mx-auto mb-4" style="background-color: var(--cor-azul)">
                 <fa-icon [icon]="faUsers" class="fs-4"></fa-icon>
               </div>
               <h4 class="fw-bold">Foco no Cliente</h4>
@@ -76,7 +76,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="card h-100 border-0 shadow-sm">
             <div class="card-body text-center p-4">
-              <div class="icon-circle bg-danger bg-opacity-10 text-danger mx-auto mb-4">
+              <div class="icon-circle bg-opacity-10 text-light mx-auto mb-4" style="background-color: var(--cor-azul)">
                 <fa-icon [icon]="faAward" class="fs-4"></fa-icon>
               </div>
               <h4 class="fw-bold">Excelência</h4>
@@ -88,7 +88,7 @@
         <div class="col-md-6 col-lg-3">
           <div class="card h-100 border-0 shadow-sm">
             <div class="card-body text-center p-4">
-              <div class="icon-circle bg-danger bg-opacity-10 text-danger mx-auto mb-4">
+              <div class="icon-circle bg-opacity-10 text-light mx-auto mb-4" style="background-color: var(--cor-azul);">
                 <fa-icon [icon]="faChartLine" class="fs-4"></fa-icon>
               </div>
               <h4 class="fw-bold">Inovação</h4>

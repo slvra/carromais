@@ -24,6 +24,11 @@
   justify-content: center;
 }
 
+.carousel-button{
+  position: absolute;
+  top: 87%;
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem !important;
