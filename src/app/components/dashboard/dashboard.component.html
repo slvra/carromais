@@ -2,6 +2,53 @@
   <app-sidebar></app-sidebar>
   
   <main class="dashboard-content flex-grow-1 p-4">
-    <router-outlet></router-outlet>
+    <router-outlet></router-outlet>  
   </main>
+</div>
+
+<div class="dashboard-container">
+  <div class="row mb-4">
+    <div class="col-md-3 mb-3" *ngFor="let item of resumo | keyvalue">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <h5 class="card-title text-muted">{{ item.key | titlecase }}</h5>
+          <h2 class="text-primary">{{ item.value | number:'1.0-0' }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header bg-white">
+          <h5>Vendas Mensais</h5>
+        </div>
+        <div class="card-body">
+          <canvas baseChart
+            [type]="vendasChartType"
+            [data]="vendasChartData"
+            [options]="vendasChartOptions">
+          </canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header bg-white">
+          <h5>Top Produtos</h5>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center" 
+                *ngFor="let produto of graficos?.topProdutos">
+              {{ produto.nome }}
+              <span class="badge bg-primary rounded-pill">{{ produto.vendas }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

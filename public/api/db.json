@@ -1,0 +1,83 @@
+{
+  "dashboard": {
+    "resumo": {
+      "totalPedidos": 1245,
+      "pedidosMes": 78,
+      "faturamento": 2548963.50,
+      "clientesAtivos": 342
+    },
+    "graficos": {
+      "vendasMensais": [
+        { "mes": "Jan", "vendas": 150000 },
+        { "mes": "Fev", "vendas": 180000 },
+        { "mes": "Mar", "vendas": 210000 },
+        { "mes": "Abr", "vendas": 195000 },
+        { "mes": "Mai", "vendas": 230000 },
+        { "mes": "Jun", "vendas": 250000 }
+      ],
+      "topProdutos": [
+        { "id": 1, "nome": "Volkswagen T-Cross", "vendas": 45 },
+        { "id": 2, "nome": "Chevrolet Onix", "vendas": 38 },
+        { "id": 3, "nome": "Ford Ranger", "vendas": 32 }
+      ]
+    }
+  },
+  "pedidos": [
+    {
+      "id": 1001,
+      "cliente": "João Silva",
+      "veiculo": "Volkswagen T-Cross Highline 1.4",
+      "valor": 112900,
+      "data": "2023-05-15",
+      "status": "Entregue",
+      "pagamento": "Financiado"
+    },
+    {
+      "id": 1002,
+      "cliente": "Maria Oliveira",
+      "veiculo": "Chevrolet Onix Premier 1.0",
+      "valor": 82900,
+      "data": "2023-06-02",
+      "status": "Em preparação",
+      "pagamento": "À vista"
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Volkswagen T-Cross",
+      "modelo": "Highline 1.4 TSI",
+      "ano": 2022,
+      "preco": 112900,
+      "estoque": 8,
+      "destaque": true
+    },
+    {
+      "id": 2,
+      "nome": "Chevrolet Onix",
+      "modelo": "Premier 1.0 Turbo",
+      "ano": 2023,
+      "preco": 82900,
+      "estoque": 12,
+      "destaque": true
+    }
+  ],
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "João Silva",
+      "email": "joao@example.com",
+      "telefone": "(11) 99999-9999",
+      "veiculosComprados": 2,
+      "ultimaCompra": "2023-05-15"
+    },
+    {
+      "id": 2,
+      "nome": "Maria Oliveira",
+      "email": "maria@example.com",
+      "telefone": "(11) 98888-8888",
+      "veiculosComprados": 1,
+      "ultimaCompra": "2023-06-02"
+    }
+  ]
+}

@@ -1,1 +1,39 @@
-<p>clientes works!</p>
+<div class="clientes-container">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Clientes</h2>
+    <button class="btn btn-primary">Adicionar Cliente</button>
+  </div>
+
+  <div class="card shadow-sm">
+    <div class="table-responsive">
+      <table class="table table-hover mb-0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Contato</th>
+            <th>Veículos</th>
+            <th>Última Compra</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+            <td>{{ cliente.id }}</td>
+            <td>{{ cliente.nome }}</td>
+            <td>
+              <div>{{ cliente.email }}</div>
+              <small class="text-muted">{{ cliente.telefone }}</small>
+            </td>
+            <td>{{ cliente.veiculosComprados }}</td>
+            <td>{{ cliente.ultimaCompra | date:'dd/MM/yyyy' }}</td>
+            <td>
+              <button class="btn btn-sm btn-outline-primary me-2">Editar</button>
+              <button class="btn btn-sm btn-outline-danger">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

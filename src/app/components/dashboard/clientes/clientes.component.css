@@ -1,4 +1,12 @@
-p{
-    background-color: blueviolet;
-    width: 100vh;
+.clientes-container {
+  padding: 20px;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
 }

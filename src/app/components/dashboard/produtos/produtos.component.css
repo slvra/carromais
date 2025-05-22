@@ -1,4 +1,20 @@
-p{
-    background-color: blueviolet;
-    width: 100vh;
+.produtos-container {
+  padding: 20px;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.list-group-item {
+  border-left: 0;
+  border-right: 0;
+}
+
+.card-footer {
+  border-top: 0;
 }
