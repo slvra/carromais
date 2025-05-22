@@ -1,10 +1,10 @@
-const jsonServer = require('json-server')
-const server = jsonServer.create()
-const router = jsonServer.router('db.json')
-const middlewares = jsonServer.defaults()
+import { create, router as _router, defaults, bodyParser } from 'json-server'
+const server = create()
+const router = _router('db.json')
+const middlewares = defaults()
 
 server.use(middlewares)
-server.use(jsonServer.bodyParser)
+server.use(bodyParser)
 
 server.get('/api/dashboard', (req, res) => {
   const db = router.db.value()
