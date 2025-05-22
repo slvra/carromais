@@ -38,9 +38,6 @@ export class LoginComponent {
       this.router.navigate(['/dashboard']);
     } else {
       this.errorMessage = 'Usuário ou senha incorretos';
-      // this.isLoading = false;
-      // this.errorMessage = 'Por favor, preencha todos os campos';
-      // return;
     }
 
     this.isLoading = true;
