@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faUser, faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { RouterModule, Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +25,7 @@ export class LoginComponent {
   isLoading: boolean = false;
   errorMessage: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
@@ -33,9 +34,13 @@ export class LoginComponent {
   onSubmit() {
     this.errorMessage = '';
     
-    if (!this.username || !this.password) {
-      this.errorMessage = 'Por favor, preencha todos os campos';
-      return;
+    if (this.authService.login(this.username, this.password)) {
+      this.router.navigate(['/dashboard']);
+    } else {
+      this.errorMessage = 'Usuário ou senha incorretos';
+      // this.isLoading = false;
+      // this.errorMessage = 'Por favor, preencha todos os campos';
+      // return;
     }
 
     this.isLoading = true;
