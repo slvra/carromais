@@ -8,6 +8,9 @@ import { SobreComponent } from './pages/sobre/sobre.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './auth.guard';
+import { PedidosComponent } from './components/dashboard/pedidos/pedidos.component';
+import { ProdutosComponent } from './components/dashboard/produtos/produtos.component';
+import { ClientesComponent } from './components/dashboard/clientes/clientes.component';
 
 export const routes: Routes = [
     {
@@ -45,7 +48,21 @@ export const routes: Routes = [
     {
         path: 'dashboard',
         component: DashboardComponent,
-        canActivate: [AuthGuard]
+        canActivate: [AuthGuard],
+        children: [
+            {
+                path: 'pedidos',
+                component: PedidosComponent
+            },
+            {
+                path: 'produtos',
+                component: ProdutosComponent
+            },
+            {
+                path: 'clientes',
+                component: ClientesComponent
+            }
+        ]
     }
 ]
 
