@@ -1,4 +1,5 @@
-p{
-    background-color: rgb(43, 107, 226);
+.container {
+    background-color: #3B1D25;
     width: 100vh;
+    color: white;
 }
