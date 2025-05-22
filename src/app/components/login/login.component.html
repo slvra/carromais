@@ -1,1 +1,65 @@
-<p>login works!</p>
+<div class="login-container d-flex justify-content-center align-items-center bg-none">
+  <div class="card login-card shadow-lg">
+    <div class="row g-0">
+      <div class="col-md-6 d-flex align-items-center justify-content-center p-4">
+        <img src="/api/img/logo-carromais.png" 
+             alt="Login CarroMais" 
+             class="img-fluid rounded-start" 
+             style=" object-fit: cover;">
+      </div>
+
+      <div class="col-md-6">
+        <div class="card-body p-5 d-flex flex-column justify-content-center h-100">
+          <h2 class="card-title text-center mb-4 fw-bold">Área Logada</h2>
+
+          <form (ngSubmit)="onSubmit()" class="login-form">
+            <div *ngIf="errorMessage" class="alert alert-danger mb-3">
+              {{ errorMessage }}
+            </div>
+
+            <div class="mb-3 input-group">
+              <span class="input-group-text bg-transparent">
+                <fa-icon [icon]="faUser" class="text-muted"></fa-icon>
+              </span>
+              <input type="text" 
+                     class="form-control" 
+                     [(ngModel)]="username" 
+                     name="username" 
+                     placeholder="usuário" 
+                     required>
+            </div>
+
+            <div class="mb-4 input-group">
+              <span class="input-group-text bg-transparent">
+                <fa-icon [icon]="faLock" class="text-muted"></fa-icon>
+              </span>
+              <input [type]="showPassword ? 'text' : 'password'" 
+                     class="form-control" 
+                     [(ngModel)]="password" 
+                     name="password" 
+                     placeholder="senha" 
+                     required>
+              <button class="btn btn-outline-secondary" 
+                      type="button" 
+                      (click)="togglePasswordVisibility()">
+                <fa-icon [icon]="showPassword ? faEyeSlash : faEye"></fa-icon>
+              </button>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mb-3 py-2 fw-bold" [disabled]="isLoading">
+              <span *ngIf="!isLoading">Login</span>
+              <span *ngIf="isLoading">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Carregando...
+              </span>
+            </button>
+
+            <div class="text-center">
+              <a href="#" class="text-decoration-none small">Esqueceu a senha?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

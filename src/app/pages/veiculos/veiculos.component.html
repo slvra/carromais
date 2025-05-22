@@ -85,7 +85,7 @@
                     <button class="btn btn-outline-primary me-md-2">
                       <i class="fas fa-info-circle me-2"></i>Detalhes
                     </button>
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary" routerLink="/contato">
                       <i class="fas fa-phone me-2"></i>Falar com vendedor
                     </button>
                   </div>
@@ -93,7 +93,7 @@
               </div>
 
               <div class="col-md-5">
-                <img [src]="veiculo.foto" class="img-fluid rounded-end h-100 object-fit-cover" [alt]="veiculo.nome">
+                <img [src]="veiculo.foto" class="img-fluid rounded-end h-100 object-fit-contain" [alt]="veiculo.nome">
               </div>
             </div>
           </div>

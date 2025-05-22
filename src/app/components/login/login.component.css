@@ -1,0 +1,93 @@
+:root {
+  --cor-azul: #1e88e5;
+  --cor-azul-claro: #e3f2fd;
+  --cor-texto: #333;
+  --cor-texto-claro: #7f8c8d;
+  --cor-branco: #fff;
+  --cor-cinza-claro: #f8f9fa;
+}
+
+.login-container {
+  background-color: var(--cor-cinza-claro);
+  padding: 20px;
+  min-height: 70vh;
+}
+
+.login-card {
+  border-radius: 15px;
+  border: none;
+  max-width: 800px;
+  width: 100%;
+}
+
+.card-body {
+  background-color: var(--cor-branco);
+  border-radius: 0 15px 15px 0;
+}
+
+.input-group-text {
+  border-right: none;
+}
+
+.form-control {
+  border-left: none;
+  padding-left: 0;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.btn-primary {
+  background-color: var(--cor-azul);
+  border-color: var(--cor-azul);
+}
+
+.btn-primary:hover {
+  background-color: #1565c0;
+  border-color: #1565c0;
+}
+
+.btn-outline-secondary {
+  border-color: #ced4da;
+  border-left: none;
+}
+
+.btn-outline-secondary:hover {
+  background-color: transparent;
+  color: var(--cor-azul);
+  border-color: #ced4da;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.spinner-border {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.btn:disabled {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    max-width: 400px;
+  }
+  
+  .card-body {
+    border-radius: 0 0 15px 15px;
+  }
+  
+  img {
+    border-radius: 15px 15px 0 0 !important;
+  }
+}
+
