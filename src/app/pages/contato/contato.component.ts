@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-contato',
@@ -13,26 +13,31 @@ export class ContatoComponent implements OnInit {
     nome: '',
     email: '',
     telefone: '',
-    mensagem: '',
-    lgpd: false,
-    ofertas: false
+    mensagem: ''
   };
 
-  constructor() { }
+  termosAceitos = false;
 
-  ngOnInit(): void {
+  constructor(private router: Router) {
+    const savedData = localStorage.getItem('contatoFormData');
+    if (savedData) {
+      this.formData = JSON.parse(savedData);
+    }
+    
+    this.termosAceitos = localStorage.getItem('termosAceitos') === 'true';
   }
+
+  ngOnInit(): void {}
 
   enviarFormulario(): void {
-    if (this.contatoForm.valid) {
-   
-      console.log('Dados do formulário:', this.formData);
-      alert('Formulário enviado com sucesso!');
-      this.contatoForm.resetForm();
-    } else {
-      alert('Por favor, preencha todos os campos obrigatórios corretamente.');
-    }
+    console.log('Dados enviados:', this.formData);
+    
+    localStorage.removeItem('contatoFormData');
+    localStorage.removeItem('termosAceitos');
+    window.location.reload();
   }
 
-  contatoForm!: NgForm;
+  salvarDadosTemporarios() {
+    localStorage.setItem('contatoFormData', JSON.stringify(this.formData));
+  }
 }

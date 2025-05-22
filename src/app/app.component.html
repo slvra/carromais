@@ -1,9 +1,10 @@
-<app-header></app-header>
+<app-header *ngIf="!isDashboardRoute()"></app-header>
 
-
-<app-main>
+<app-main *ngIf="!isDashboardRoute()">
   <div class="container mt-5">
     <router-outlet></router-outlet>
   </div>
 </app-main>
-<app-footer></app-footer>
+<app-footer *ngIf="!isDashboardRoute()"></app-footer>
+
+<router-outlet></router-outlet>

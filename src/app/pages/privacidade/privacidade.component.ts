@@ -1,33 +1,25 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-privacidade',
-  imports: [FormsModule, RouterModule],
+  imports: [FormsModule],
   templateUrl: './privacidade.component.html',
   styleUrl: './privacidade.component.css'
 })
-export class PrivacidadeComponent implements OnInit {
+export class PrivacidadeComponent {
+  termosAceitos = false;
 
-  // @Output() termosAceitos: EventEmitter<boolean> = new EventEmitter<boolean>();
-  termosAceitos: boolean = false;
-
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
-  }
+  constructor(private router: Router) {}
 
   aceitarTermos(): void {
-    alert('Você aceitou os Termos de Uso e Política de Privacidade.');
-    this.termosAceitos = true;
-    console.log('Termos aceitos:', this.termosAceitos);
+    localStorage.setItem('termosAceitos', 'true');
+    this.router.navigate(['/contato']);
   }
 
   naoAceitarTermos(): void {
-    alert('Você não aceitou os Termos de Uso e Política de Privacidade.');
+    localStorage.removeItem('contatoFormData');
     this.router.navigate(['/home']);
-    console.log('Termos aceitos:', this.termosAceitos);
   }
-
 }

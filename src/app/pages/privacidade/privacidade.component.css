@@ -60,5 +60,17 @@
         color: white;
         margin-left: 10px;
       }
+
+
     }
   }
+
+        .acc-button {
+        border-color: var(--cor-azul);
+        padding: 10px 30px;
+      }
+
+      .acc-button:hover {
+        background-color: var(--cor-azul);
+        border-color: var(--cor-azul);
+      }

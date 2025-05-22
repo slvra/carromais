@@ -1,10 +1,8 @@
 <nav class="sidebar d-flex flex-column flex-shrink-0 p-3 bg-white shadow">
-  <!-- Logo -->
   <div class="text-center mb-4">
     <span class="fs-4 fw-bold text-primary">CarroMais</span>
   </div>
 
-  <!-- Menu Principal -->
   <ul class="nav nav-pills flex-column mb-auto">
     <li *ngFor="let item of menuItems" class="nav-item mb-2">
       <a 
@@ -12,13 +10,12 @@
         routerLinkActive="active"
         class="nav-link d-flex align-items-center"
       >
-        <fa-icon [icon]="icons[item.icon]" class="me-3"></fa-icon>
+        <!-- <fa-icon [icon]="icons[item.icon]" class="me-3"></fa-icon> -->
         <span>{{item.label}}</span>
       </a>
     </li>
   </ul>
 
-  <!-- Botão de Logout -->
   <div class="mt-auto">
     <button 
       class="btn btn-link text-decoration-none d-flex align-items-center w-100 p-2"
