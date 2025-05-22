@@ -1,15 +1,19 @@
-<h2 class="titulo text-center display-4 fw-bold text-dark ">Fale conosco</h2>
-<div class="container mb-5">
+    <div class="text-center mb-5">
+      <h1 class="display-4 fw-bold text-dark mb-3">Fale conosco</h1>
+      <div class="divider mx-auto" style="height: 4px; width: 80px; background-color: var(--cor-azul);"></div>
+    
+    </div>
+<div class="container mb-5 bg-light">
   <div class="row g-3">
     <div class="col-md-6 my-auto">
       <img
-        src="/api/img/logo-carromais.png"
+        src="/api/img/logo-carromais3.png"
         class="img-fluid rounded shadow-sm"
         alt="Logo CarroMais"
       />
     </div>
     <div class="col-md-6">
-      <div class="border rounded shadow-sm p-4">
+      <div class="border rounded shadow-sm p-4" style="background-color: #e4e4e4;">
         <form (ngSubmit)="enviarFormulario()" #contatoForm="ngForm" (change)="salvarDadosTemporarios()">
           <div class="mb-3">
             <input

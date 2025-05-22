@@ -1,19 +1,37 @@
-<header class="d-flex align-items-center justify-content-between px-4 py-2">
-  <div class="d-flex align-items-center">
-    <img src="" alt="" class="me-2">
-    <h1 class="brand-font m-0">CarroMais</h1>
-  </div>
-  <nav class="menu d-flex align-items-center">
-    <ul class="menu-list d-flex list-unstyled m-0">
-      <li><a class="menu-list-iten nav-link px-3 fs-5 hover:shadow-lg" routerLink="/home">Home</a></li>
-      <li><a class="menu-list-iten nav-link px-3 fs-5 hover:shadow-lg" routerLink="/veiculos">Veículos</a></li>
-      <li><a class="menu-list-iten nav-link px-3 fs-5 hover:shadow-lg" routerLink="/contato">Contato</a></li>
-      <li><a class="menu-list-iten nav-link px-3 fs-5 hover:shadow-lg" routerLink="/sobre">Sobre nós</a></li>
-    </ul>
-    <div class="acesso">
-      <button type="button" class="btn btn-outline-light ms-5"routerLink="/login">
-        <i class="fas fa-user "></i>
-      </button>
+<header class="header">
+  <div class="header-container">
+    <div class="brand">
+      <h1 class="brand-name brand-font fs-1">CarroMais</h1>
     </div>
-  </nav>
+
+    <nav class="desktop-menu">
+      <ul class="menu-list">
+        <li><a class="menu-item" routerLink="/home">Home</a></li>
+        <li><a class="menu-item" routerLink="/veiculos">Veículos</a></li>
+        <li><a class="menu-item" routerLink="/contato">Contato</a></li>
+        <li><a class="menu-item" routerLink="/sobre">Sobre nós</a></li>
+      </ul>
+      <button type="button" class="login-btn" routerLink="/login">
+        <i class="fas fa-user"></i>
+      </button>
+    </nav>
+
+    <button class="mobile-menu-btn" (click)="toggleMenu()">
+      <i class="fas" [class.fa-bars]="!menuOpen" [class.fa-times]="menuOpen"></i>
+    </button>
+  </div>
+
+  <div class="mobile-menu" [class.open]="menuOpen">
+    <ul>
+      <li><a class="mobile-menu-item" routerLink="/home" (click)="toggleMenu()">Home</a></li>
+      <li><a class="mobile-menu-item" routerLink="/veiculos" (click)="toggleMenu()">Veículos</a></li>
+      <li><a class="mobile-menu-item" routerLink="/contato" (click)="toggleMenu()">Contato</a></li>
+      <li><a class="mobile-menu-item" routerLink="/sobre" (click)="toggleMenu()">Sobre nós</a></li>
+      <li>
+        <a class="mobile-menu-item login-link" routerLink="/login" (click)="toggleMenu()">
+          <i class="fas fa-user me-2"></i> Login
+        </a>
+      </li>
+    </ul>
+  </div>
 </header>
